@@ -4,6 +4,7 @@
 ```sql
 
 -- 1ª Digitação (SQL para criar o Banco de dados)
+CREATE DATABASE tecdev_escola_gabriel CHARACTER SET utf8mb4;
 
 ```
 <!-- ____________________________________________________________________ -->
