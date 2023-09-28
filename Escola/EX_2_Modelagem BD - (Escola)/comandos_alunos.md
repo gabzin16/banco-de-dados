@@ -12,7 +12,12 @@ CREATE DATABASE tecdev_escola_gabriel CHARACTER SET utf8mb4;
 ```sql
 
 -- 2ª Digitação (SQL para criar a tabela Cursos)
-
+CREATE TABLE cursos(
+    id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    TITULO VARCHAR(30) NOT NULL,
+    carga_horaria  SMALLINT NOT NULL,
+    professor_id SMALLINT NOT NULL
+)
 
 ```
 <!-- ____________________________________________________________________ -->
@@ -20,7 +25,12 @@ CREATE DATABASE tecdev_escola_gabriel CHARACTER SET utf8mb4;
 ```sql
 
 -- 3ª Digitação (SQL para criar a tabela Professores)
-
+CREATE TABLE professores(
+    id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    area_de_atuacao ENUN ('desing, desenvolvimento, infra'),
+    curso_id SMALLINT NOT NULL
+)
 
 ```
 <!-- ____________________________________________________________________ -->
@@ -28,7 +38,14 @@ CREATE DATABASE tecdev_escola_gabriel CHARACTER SET utf8mb4;
 ```sql
 
 -- 4ª Digitação (SQL para criar a tabela Alunos)
-
+CREATE TABLE alunos(
+    id SMALLINT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    data_de_nascimento DATE,
+    primeira_nota DECIMAL (4,2),
+    segunda_nota DECIMAL (4,2)
+    curso_id SMALLINT NOT NULL
+)
 
 ```
 <!-- ____________________________________________________________________ -->
